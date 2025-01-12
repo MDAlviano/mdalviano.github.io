@@ -1,7 +1,25 @@
-export default function App() {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+
+function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <Router>
+      <Routes>
+
+        {/* Home Page */}
+        <Route
+        path="/"
+        element={
+          <div>
+            <Navbar/>
+          </div>
+        }
+        />
+
+      </Routes>
+    </Router>
+  );
 }
+
+export default App;
